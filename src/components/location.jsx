@@ -21,7 +21,7 @@ export default function LocationSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="mb-4 mt-12 overflow-hidden rounded-2xl border shadow-lg">
+          <div className="mt-12 overflow-hidden rounded-2xl border shadow-lg">
             <iframe
               className="h-105 w-full"
               loading="lazy"

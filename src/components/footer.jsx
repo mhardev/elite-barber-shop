@@ -1,7 +1,6 @@
-'use client'   // <-- add this at the very top
+'use client'
 
 import React from 'react'
-import Link from 'next/link'
 
 const links = [
   { title: 'Home', href: 'hero-section' },
@@ -20,14 +19,17 @@ export default function FooterSection() {
   }
 
   return (
-    <footer className="border-b bg-white py-12 dark:bg-transparent">
+    <footer className="border-b border-t-1 bg-white py-8 dark:bg-transparent">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="flex flex-wrap justify-between gap-6">
-          <span className="text-muted-foreground order-last block text-center text-sm md:order-first">
-            © {new Date().getFullYear()} Elite Barber Shop, All rights reserved
+        <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:items-center">
+          
+          {/* Copyright - left on desktop */}
+          <span className="order-last text-center text-sm text-muted-foreground md:order-first md:text-left">
+            © {new Date().getFullYear()} Elite Barber Shop, All rights reserved.
           </span>
 
-          <div className="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
+          {/* Navigation Links - right on desktop */}
+          <div className="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last md:justify-end">
             {links.map((link, index) => (
               <a
                 key={index}
