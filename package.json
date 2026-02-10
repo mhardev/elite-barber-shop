@@ -30,5 +30,8 @@
     "eslint-config-next": "16.1.6",
     "shadcn": "^3.8.4",
     "tailwindcss": "^4"
+  },
+  "overrides": {
+    "node-domexception": "latest"
   }
 }
