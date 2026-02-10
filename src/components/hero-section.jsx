@@ -23,7 +23,7 @@ export default function HeroSection() {
           <div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
         </div>
 
-        <section id="hero-section">
+        <section id="hero-section" className="pb-8 md:pb-16">
           <div className="relative pt-24">
             <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]" />
 
@@ -53,16 +53,20 @@ export default function HeroSection() {
 
             {/* Hero Image */}
             <ScrollReveal delay={0.2}>
-              <div className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-5xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                  <Image
-                    src="/images/elite-barber-shop.jpg"
-                    alt="Elite Barber Shop app preview"
-                    width={2700}
-                    height={1440}
-                    priority
-                    className="aspect-15/8 w-full rounded-2xl border border-border/25 object-cover"
-                  />
+              <div className="relative mt-8 overflow-hidden px-2 sm:mt-12 md:mt-20">
+                <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border shadow-lg shadow-zinc-950/15 ring-1 ring-background dark:inset-shadow-white/20 bg-background">
+                  
+                  {/* Hero Image with fade effect */}
+                  <div className="w-full overflow-hidden rounded-2xl mask-b-from-55%">
+                    <Image
+                      src="/images/elite-barber-shop.jpg"
+                      alt="Elite Barber Shop app preview"
+                      width={2700}
+                      height={1440}
+                      priority
+                      className="w-full h-auto object-cover rounded-2xl border border-border/25"
+                    />
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
