@@ -16,26 +16,29 @@ export default function ContactSection() {
         e.preventDefault()
 
         toast.promise(
-            emailjs.sendForm(
+            emailjs
+            .sendForm(
                 "service_uoorioe",
                 "template_bur03mb",
                 form.current,
-                {
-                    publicKey: "HuU1d4jpUoeeR9PqI",
-                }
-            ),
+                { publicKey: "HuU1d4jpUoeeR9PqI" }
+            )
+            .then((response) => {
+                // response.status contains the HTTP status code
+                form.current.reset()
+                return `Message sent successfully! ✂️ (Status: ${response.status})`
+            })
+            .catch((err) => {
+                return err?.text || "Failed to send message. Please try again."
+            }),
             {
                 loading: "Sending your message...",
-                success: () => {
-                    form.current.reset()
-                    return "Message sent successfully! ✂️"
-                },
-                error: (err) => {
-                    return err?.text || "Failed to send message. Please try again."
-                },
+                success: (msg) => msg,
+                error: (err) => err, 
             }
         )
     }
+
     return (
         <section id="contact" className="bg-brand-gradient py-32">
             <div className="mx-auto max-w-3xl px-8 lg:px-0">

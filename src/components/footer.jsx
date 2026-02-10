@@ -19,7 +19,7 @@ export default function FooterSection() {
   }
 
   return (
-    <footer className="border-b border-t-1 bg-white py-8 dark:bg-transparent">
+    <footer className="border-b bg-white py-8 dark:bg-transparent">
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:items-center">
           

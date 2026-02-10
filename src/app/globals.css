@@ -219,3 +219,7 @@ html, body {
 html.theme-changing .theme-fade {
   opacity: 0.15;
 }
+
+.scroll-reveal * {
+  filter: none !important;
+}
