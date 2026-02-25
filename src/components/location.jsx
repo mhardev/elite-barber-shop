@@ -15,7 +15,7 @@ export default function LocationSection() {
   }, [])
 
   return (
-    <section id="location" className="bg-background py-24 pb-8">
+    <section id="location" className="bg-background py-16 md:py-32">
       <div className="mx-auto max-w-3xl px-6">
         <ScrollReveal>
           <h1 className="text-center text-4xl font-semibold lg:text-5xl text-foreground">
