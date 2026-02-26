@@ -40,7 +40,7 @@ export default function ContactSection() {
     }
 
     return (
-        <section id="contact" className="bg-brand-gradient py-32">
+        <section id="contact" className="bg-brand-gradient py-16 md:py-32">
             <div className="mx-auto max-w-3xl px-8 lg:px-0">
                 <ScrollReveal>
                     <h1 className="text-center text-4xl font-semibold lg:text-5xl text-foreground">
